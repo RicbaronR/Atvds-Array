@@ -9,11 +9,20 @@
     */
 
     //ENTRADA
-
+    const palavra = prompt(`Digite uma palvra:`).toUpperCase();
+    const letra = prompt(`Informe qual letra deseja encontrar na palavra que acabou de digitar:`).toUpperCase();
 
     //PROCESSAMENTO
+    let posicao = palavra.indexOf(letra)+1;
+    let mensagem;
+    if(posicao >= 0){
+        mensagem = `A letra que você procura existe na palavra digitada. E podemos encontrá-la na ${posicao}ª posição da palavra.`;
+    } else{
+        mensagem = `A letra que você procura não existe na palavra digitada.`;
+    }
 
 
     //SAÍDA
+    document.write(mensagem);
 
 </script>

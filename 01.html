@@ -11,8 +11,8 @@
     const num2 = Number(prompt(`Informe outro número:`).replace(",", "."));
 
     //PROCESSAMENTO
-    let lista;
-    if (num1 <= num2) {
+    let lista = [num1, num2];
+    if (lista[0] <= lista[1]) {
         lista = [num1, num2];
     }else {
         lista = [num2, num1];
