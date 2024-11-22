@@ -13,9 +13,44 @@
     */
 
     //ENTRADA
+    const cor = prompt(`Informe uma cor entre: "azul", "amarelo", "verde", "branco", "preto", "marrom", "cinza".`).toLowerCase().trim();
+
 
 
     //PROCESSAMENTO
+    const nomeCores = ["azul", "amarelo", "verde", "branco", "preto", "marrom", "cinza"];
+    let numAleatorio = Math.floor(Math.random()*7);
+
+    let numCor
+    if(cor === "azul"){
+        numCor = 1;
+    } else if(cor === "amarelo"){
+        numCor = 2;
+    } else if(cor === "verde"){
+        numCor = 3;
+    } else if(cor === "branco"){
+        numCor = 4;
+    } else if(cor === "preto"){
+        numCor = 5;
+    } else if(cor === "marrom"){
+        numCor = 6;
+    } else if(cor === "cinza"){
+        numCor = 7;
+    } else {
+        alert(`Informe uma cor válida!`);
+    }
+
+    let mensagem;
+    if(numCor === numAleatorio){
+        mensagem = `PARABÉNS! VOCÊ ESTÁ COM SORTE NA COR ${cor.toUpperCase()}.`;
+    } else if(numCor !== numAleatorio){
+        mensagem = `NÃO FOI DESSA VEZ... TENTE NOVAMENTE! ${numAleatorio}`;
+    } else{
+        alert(`Algo deu errado!`)
+    }
+
+    document.write(mensagem);
+    
 
 
     //SAÍDA
