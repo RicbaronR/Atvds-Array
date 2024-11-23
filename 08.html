@@ -16,7 +16,7 @@
     let lista = [palavra]
     let posicao = lista[0].indexOf(letra)+1;
     let mensagem;
-    if(posicao >= 0){
+    if(posicao > 0){
         mensagem = `A letra que você procura existe na palavra digitada. E podemos encontrá-la na ${posicao}ª posição da palavra.`;
     } else{
         mensagem = `A letra que você procura não existe na palavra digitada.`;
