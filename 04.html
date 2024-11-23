@@ -9,32 +9,17 @@
     */
 
     //ENTRADA
-    const remocaoCarro = prompt(`Informe qual carro deseja remover dessa lista:
-    Tiggo
-    Sportage
-    Tucson
-    EcoSport`).toUpperCase().trim()
+
+    let carrosSUV = ["Tiggo", "Sportage", "Tucson", "EcoSport"];
+    let carroRetirar = prompt(`Informe qual carro deseja retirar:\n-${carrosSUV.join("\n-")}`);
+    let listaAntiga = ["Tiggo", "Sportage", "Tucson", "EcoSport"];
 
     //PROCESSAMENTO
-    let carrosSUV = ["Tiggo", "Sportage", "Tucson", "EcoSport"];
-    let removido;
-    let listaAntiga = [...carrosSUV];// Anotação: serve para copiar a lista oiginal.
-    if(remocaoCarro == "TIGGO"){
-        removido = carrosSUV.splice(0, 1)
-    } else if(remocaoCarro == "SPORTAGE"){
-        removido = carrosSUV.splice(1, 1)
-    } else if(remocaoCarro == "TUCSON"){
-        removido = carrosSUV.splice(2, 1)
-    } else if(remocaoCarro == "ECOSPORT"){
-        removido = carrosSUV.splice(3, 1)
-    } else{
-        alert(`Escolha um dos carros que deseja remover da lista!`)
-    }
-    
-
+    const posicao = carrosSUV.indexOf(carroRetirar);
+    carrosSUV.splice(posicao, 1);
 
     //SAÍDA
-    document.write(`Lista Antiga: ${listaAntiga.join(", ")}.<br>
-    Nova Lista: ${carrosSUV.join(", ")}`);
+
+    document.write()
 
 </script>
